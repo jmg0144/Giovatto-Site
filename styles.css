@@ -1,0 +1,1172 @@
+@font-face {
+  font-family: "Aspekta";
+  src: url("assets/fonts/Aspekta-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.blue-span {
+  color: #80caff;
+}
+
+.blue-span2 {
+  color: #0d6efd;
+}
+
+.yellow-span {
+  color: #ffc107;
+}
+
+.green-span {
+  color: #198754;
+}
+
+.red-span {
+  color: #c62828;
+}
+
+.heading-para {
+  margin-top: 20%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+}
+
+#image-section {
+  background-image: url("assets/nyc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+
+.para {
+  font-family: "Inter", sans-serif;
+}
+
+.custom-pt {
+  padding-top: 10%;
+}
+
+.custom-mb {
+  margin-bottom: 10%;
+}
+
+.custom-pb {
+  padding-bottom: 10%;
+}
+
+/* 
+##########################################################################  
+HEADER SECTION START
+############################################################################  
+ */
+
+#header-section {
+  background-color: #0b0f19;
+  height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+/* Sticky header */
+#header-section {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #0b0f19; /* initial dark background */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default link and button styles */
+#header-section .nav-link,
+#header-section .hamburger span,
+#header-section .btn,
+#header-section svg {
+  color: white;
+  fill: white;
+  transition: color 0.3s ease, fill 0.3s ease, border-color 0.3s ease;
+}
+
+#header-logo {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* When scrolled */
+#header-section.scrolled {
+  background-color: white;
+}
+
+/* Change text and svg colors when scrolled */
+#header-section.scrolled .nav-link,
+#header-section.scrolled .hamburger span,
+#header-section.scrolled .btn,
+#header-section.scrolled svg {
+  color: black !important;
+  fill: black !important;
+  /*border-color: black !important;*/
+}
+
+/* Hide logo when scrolled 
+#header-section.scrolled #header-logo {
+  opacity: 0;
+  visibility: hidden;
+}*/
+
+/* Show logo at top */
+#header-section #header-logo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-link {
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  color: white;
+}
+
+/* Active nav link (scrollspy) at top or scrolled */
+#header-section .nav-link.active {
+  color: white !important; /* always white text */
+  background-color: #0d6efd; /* Bootstrap primary blue */
+}
+
+/* Scrolled state for other nav links (not active) */
+#header-section.scrolled .nav-link:not(.active) {
+  color: black !important;
+}
+
+/* Contact button default */
+#contact {
+  background-color: #0d6efd; /* Bootstrap primary blue */
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Default hover (at the top) */
+#contact:hover {
+  background-color: #0b5ed7; /* slightly darker Bootstrap hover blue */
+  color: white;
+}
+
+/*Contact button when scrolled*/
+#header-section.scrolled #contact {
+  /*background-color: white !important;
+  border: 1px solid #0d6efd !important;*/
+  color: white !important;
+}
+
+/* Hover effect when scrolled */
+#header-section.scrolled #contact:hover {
+  background-color: #0d6efd !important;
+  color: white !important;
+}
+
+.site-header {
+  position: relative;
+  gap: 12px;
+}
+
+/* Absolute center the nav across the whole header */
+.site-header .main-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+/* Two-line hamburger */
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  padding: 6px;
+  cursor: pointer;
+  color: white;
+}
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: currentColor; /* inherits text color */
+}
+
+/* Mobile behavior: hide nav until toggled */
+@media (max-width: 991.98px) {
+  .site-header .main-nav {
+    display: none; /* hidden by default on mobile */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: none;
+    background: #fff;
+    padding: 10px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+  .site-header .main-nav.open {
+    display: flex;
+  }
+}
+
+/* Desktop: keep Bootstrap's flex nav visible & centered */
+@media (min-width: 992px) {
+  .site-header .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.primary-button {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  margin-top: 15%;
+  margin-left: 30%;
+  color: black;
+}
+
+/* 
+##########################################################################  
+HEADER SECTION CLOSE 
+#############################################################################  
+*/
+
+/* 
+######################################################################## 
+HERO SECTION START 
+###########################################################################  
+*/
+
+#hero-section {
+  width: 100%;
+  height: 95vh;
+  position: relative;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  background-color: #0b0f19;
+}
+
+/* Container using flex for left content */
+.hero-container {
+  display: flex;
+  height: 100%;
+  position: relative;
+  z-index: 2; /* ensures content is above video */
+}
+
+/* Left Content */
+.hero-content {
+  flex: 0 0 65%; /* 50% width for content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  position: relative;
+  z-index: 3; /* above video */
+}
+
+/* Headline */
+#tagline1 {
+  font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 20px;
+  font-family: "Montserrat";
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.hero-btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  width: 280px;
+}
+
+/* Video wrapper */
+.hero-video-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%; /* video takes 60% width */
+  height: 100%;
+  z-index: 1; /* behind content */
+  overflow: hidden;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Video */
+.hero-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradient Overlay */
+.hero-video-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.7)
+  );
+  z-index: 2;
+}
+
+/* Secondary tagline */
+#tagline2 {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  padding-left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  z-index: 3;
+  /*max-width: 400px;*/
+  font-family: "Inter", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hero-content {
+    flex: 1 1 100%;
+    padding-left: 20px;
+    text-align: center;
+  }
+  .hero-video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    clip-path: none;
+    margin-top: 20px;
+  }
+  #tagline1 {
+    font-size: 2.5rem;
+  }
+  #tagline2 {
+    font-size: 1.5rem;
+    max-width: 90%;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+#hero-heading {
+  font-size: 7rem;
+  font-family: "Aspekta", sans-serif;
+  font-weight: 600;
+  letter-spacing: -15px;
+  margin-top: 15%;
+  color: white;
+}
+
+#trade-mark {
+  font-size: 2rem;
+  margin-left: 5%;
+}
+
+#cta {
+  text-decoration: underline;
+  color: white;
+}
+
+#agency {
+  color: #0d6efd;
+}
+
+#contact {
+  border-radius: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  width: 200px;
+}
+
+#services-button {
+  font-family: "Inter", sans-serif;
+  padding: 3%;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* 
+######################################################################## 
+HERO SECTION CLOSE
+###########################################################################  
+*/
+
+/*
+###############################################################################  
+SERVICES SECTION START 
+############################################################################### 
+*/
+
+#services-section {
+  /*background-color: #f5f5f7;*/
+  /*background-color:#FFF8F0;*/
+  /*background-color: #f5f7fa;*/
+  background-color: white;
+}
+
+.card-carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.card-carousel {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.6s ease;
+}
+
+.apple-card {
+  flex: 0 0 calc(100% / 2.5); /* Show 2.5 cards */
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  /*text-shadow: 0 2px 6px rgba(0,0,0,0.6);*/
+}
+
+.cards-container-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.apple-card {
+  flex: 0 0 calc(100% / 2.5); /* Show 2.5 cards */
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  /*box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;*/
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: transparent;
+}
+
+.card-top {
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-container .apple-card {
+  will-change: transform; /* GPU-accelerated scroll */
+}
+
+.card-top {
+  width: 100%;
+  height: 200px; /* same as before */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* placeholder so layout doesn’t collapse */
+  background-color: #1a1a1a;
+
+  transition: background-image 0.3s ease; /* smooth fade-in */
+}
+
+.card-top {
+  width: 100%;
+  height: 400px; /* adjust to match your original card layout */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-top::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: inherit;
+  transition: transform 0.6s ease;
+}
+
+.apple-card:hover .card-top::before {
+  transform: scale(1.1);
+}
+
+.card-svg {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  color: white; /* black color for contrast on light images */
+}
+
+.card-bottom {
+  height: 50%;
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#card-bottom1 {
+  background: #e6521f;
+}
+
+#card-bottom3 {
+  background-color: #0b5ed7;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+}
+
+.services-section-button.narrow-btn {
+  width: 140px; /* adjust width as needed */
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+.scroll-btn {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  padding: 0 10px;
+  border-radius: 50%;
+}
+
+.left-btn {
+  left: -10px;
+}
+
+.right-btn {
+  right: -10px;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* SVG hover effect - initial state */
+.card-svg {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  z-index: 2;
+  color: white; /* black for contrast */
+  transform: translateY(0) scale(1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease,
+    opacity 0.4s ease;
+  opacity: 0.9;
+}
+
+/* Animate SVG on card hover */
+.apple-card:hover .card-svg {
+  transform: translateY(-10px) scale(1.3); /* floats up and grows slightly */
+  color: #aaa; /* accent color */
+  opacity: 1;
+}
+
+/* Optional: pulse animation when hovering card */
+@keyframes pulse {
+  0% {
+    transform: translateY(-10px) scale(1.3);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-12px) scale(1.35);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-10px) scale(1.3);
+    opacity: 1;
+  }
+}
+
+.apple-card:hover .card-svg {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Button hover effect */
+.services-section-button {
+  transition: all 0.3s ease;
+}
+
+.work-button {
+  border-radius: 30px;
+}
+
+/* Top background image hover effect */
+.card-top::before {
+  transition: transform 0.6s ease, filter 0.3s ease;
+}
+
+.apple-card:hover .card-top::before {
+  transform: scale(1.1);
+  filter: brightness(1.05);
+}
+
+/* Lift entire card slightly on hover */
+.apple-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+#contact-svg {
+  margin-bottom: 1%;
+}
+
+#strategy {
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  padding: 3%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#strategy-heading {
+  font-size: 3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}
+
+.services-section-heading {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.services-heading-para {
+  font-family: "Inter", sans-serif;
+  color: gray;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  max-width: 650px; /* controls paragraph width */
+  margin: 0;
+}
+
+.services-heading {
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: black;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.services-heading:hover {
+  color: black;
+}
+
+/*
+###############################################################################  
+SERVICES SECTION CLOSE
+###############################################################################  
+*/
+
+/*
+########################################################################### 
+WORK SECTION START
+###########################################################################  
+*/
+
+.work-heading-para {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 5%;
+}
+
+.work-section-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 15%;
+}
+
+#work-section {
+  background: #0b0f19;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.work-img {
+  height: 550px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.work-img:hover {
+  transform: scale(1.03);
+}
+
+.work-card {
+  /*background-color: #80caff; 
+  border-radius: 16px; 
+  overflow: hidden;
+  padding: 16px;
+  text-align: center;*/
+  /* Remove or comment out background-color */
+  background-color: #f0f0f0;
+
+  /* Make the background cover the entire card */
+  background-size: cover;
+
+  /* Center the image */
+  background-position: center;
+
+  /* Optional: prevent repeating */
+  background-repeat: no-repeat;
+
+  /* Keep other styling (padding, border-radius, etc.) */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#work-card1 {
+  background-color: #e6521f;
+}
+
+#work-card2 {
+  /*background-image: url("assets/james-lee-YpDkIh137ws-unsplash.jpg");*/
+  background-color: #80caff;
+}
+
+#work-card3 {
+  /*background-image: url("assets/ikhlas-egu0sFVi8m8-unsplash.jpg");*/
+  background-color: #414141;
+}
+
+#work-card4 {
+  background-color: #d3d2d0;
+}
+
+#work-card5 {
+  background-color: #80caff;
+}
+
+#work-card6 {
+  /*background: url("assets/shubhankar-sharma-pO_wSu25LtA-unsplash.jpg");*/
+  background-color: #e6521f;
+}
+
+.project-img-container {
+  width: 100%;
+  height: 350px; /* Adjust as needed */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.project-img-container img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover; /* Fill container */
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between; /* title left, tags right */
+  align-items: center;
+  margin-top: 8px; /* space under the card */
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0; /* remove default gap */
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.5rem; /* space between tags */
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.work-shadow {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+/*
+######################################################### 
+WORK SECTION CLOSE
+######################################################### 
+*/
+
+/*
+######################################################### 
+ABOUT SECTION START 
+#########################################################
+*/
+
+.meet-button {
+  border-radius: 30px;
+  width: 300px;
+}
+
+#about-heading-row {
+  padding-top: 10%;
+}
+
+#about-section-heading {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 4.5rem; /* larger heading */
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left; /* ensure left alignment */
+}
+
+#about-heading-para {
+  font-family: "Inter", sans-serif;
+  color: gray;
+  font-size: 1.25rem;
+  /*line-height: 1.7;*/
+  max-width: 650px; /* keeps readable line length */
+  text-align: left; /* aligns paragraph with heading */
+  margin-top: 10%;
+}
+
+.about-stats {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  gap: 20px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.about-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #0b0f19;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stat-label {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: white;
+}
+
+.stat-number {
+  font-family: "Inter", sans-serif;
+  font-size: 8rem;
+  font-weight: 500;
+  color: white;
+}
+
+/*
+######################################################### 
+ABOUT SECTION CLOSE
+######################################################### 
+*/
+
+/*
+######################################################### 
+REVIEW SECTION START 
+#########################################################
+*/
+
+#review-section {
+  background-color: #0b0f19;
+  color: white;
+}
+
+#review-container {
+  padding-bottom: 10%;
+}
+
+.review-card1 {
+  background-color: #0b5ed7;
+}
+
+.review-card2 {
+  background-color: white;
+}
+
+.review-card3 {
+  background-color: #e6521f;
+}
+
+.review-heading-row {
+  margin-bottom: 80px; /* space below section */
+  padding-top: 10%;
+}
+
+.review-section-heading {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 4.5rem; /* larger heading */
+  font-weight: 700;
+  margin: 0; /* remove extra spacing */
+  text-align: left;
+}
+
+.review-heading-para {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.7; /* improved readability */
+  max-width: 650px;
+  margin: 0; /* remove margin-top */
+  text-align: left;
+}
+
+#review-div {
+  margin-top: 10%;
+}
+
+/*
+######################################################### 
+REVIEW SECTION CLOSE
+######################################################### 
+*/
+
+/*
+######################################################### 
+FAQ SECTION START 
+#########################################################
+*/
+
+#faq-container {
+  margin-top: 10%;
+}
+
+#faq-section {
+  height: 100vh;
+}
+
+.accordion-item {
+  background-color: #0b5ed7;
+}
+
+.accordion-button {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+#faq-section-heading {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 4.5rem; /* larger heading */
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left; /* ensure left alignment */
+}
+
+#faq-heading-para {
+  font-family: "Inter", sans-serif;
+  color: gray;
+  font-size: 1.25rem;
+  /*line-height: 1.7;*/
+  max-width: 650px; /* keeps readable line length */
+  text-align: left; /* aligns paragraph with heading */
+  margin-top: 10%;
+}
+
+#faqAccordion {
+  margin-top: 5%;
+}
+
+/*
+######################################################### 
+FAQ SECTION CLOSE
+######################################################### 
+*/
+
+/*
+######################################################### 
+BLOG SECTION START 
+#########################################################
+*/
+
+.blog-img {
+  transition: transform 0.4s ease;
+}
+.blog-img:hover {
+  transform: scale(1.05);
+}
+
+#blog-section {
+  height: 100vh;
+  background-color: #0b0f19;
+  color: white;
+}
+
+#blog-section-heading {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 4.5rem; /* larger heading */
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left; /* ensure left alignment */
+}
+
+/*
+######################################################### 
+BLOG SECTION CLOSE
+######################################################### 
+*/
+
+/*
+######################################################### 
+CONTACT SECTION START 
+#########################################################
+*/
+
+#contact-section {
+  background-color: white;
+  color: #0b0f19;
+}
+
+.contact-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1c1f2a;
+}
+
+.contact-para {
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  color: gray;
+  text-align: center;
+}
+
+#contact-form .form-control {
+  border-radius: 12px;
+  background-color: #1c1f2a;
+  color: white;
+  border: 1px solid #333;
+}
+
+#contact-form .form-control::placeholder {
+  color: white;
+}
+
+#contact-form .form-label {
+  font-weight: 500;
+  color: #1c1f2a;
+}
+
+#contact-form .btn-primary {
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+#contact-form-button {
+  border-radius: 30px;
+  width: 300px;
+  margin-left: 30%;
+}
+
+/*
+######################################################### 
+CONTACT SECTION CLOSE
+######################################################### 
+*/
+
+/*
+######################################################### 
+FOOTER SECTION START 
+#########################################################
+*/
+
+#footer-section {
+  background-color: #1c1f2a;
+  color: white;
+}
+
+#instagram {
+  color: white;
+}
+
+#facebook {
+  color: white;
+}
+
+#twitter {
+  color: white;
+}

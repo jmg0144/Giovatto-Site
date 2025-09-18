@@ -121,3 +121,31 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
+// Hamburger Menu Toggle (Mobile Nav)
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const mainNav = document.querySelector(".main-nav");
+
+  if (hamburger && mainNav) {
+    hamburger.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+      hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const stats = document.querySelectorAll(".about-stat");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("show");
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  stats.forEach((stat) => observer.observe(stat));
+});

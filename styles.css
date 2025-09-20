@@ -1039,6 +1039,7 @@ FAQ SECTION START
   text-align: left;
   padding-left: 30%;
   text-align: right;
+  line-height: 1.5;
 }
 
 #faq-heading-para {
@@ -1047,6 +1048,7 @@ FAQ SECTION START
   font-size: 1.5rem;
   max-width: 650px;
   text-align: left;
+  line-height: 2;
 }
 
 .accordion-item {
@@ -1179,7 +1181,8 @@ CONTACT SECTION START
 
 #contact-form .form-control {
   border-radius: 12px;
-  background-color: #1c1f2a;
+  /*background-color: #1c1f2a;*/
+  background-color: #0b0f19;
   color: white;
   border: 1px solid #333;
 }

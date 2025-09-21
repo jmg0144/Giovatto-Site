@@ -44,16 +44,168 @@
 }
 
 .custom-pt {
-  padding-top: 10%;
-}
-
-.custom-mb {
-  margin-bottom: 10%;
+  padding-top: 120px;
 }
 
 .custom-pb {
+  padding-bottom: 120px;
+}
+
+.custom-mb {
+  margin-bottom: 120px;
+}
+
+.section-padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/*
+=============================================================================
+HEADINGS START
+=============================================================================
+*/
+
+#services-section {
+  background-color: #0b0f19;
+}
+
+#work-section {
+  background: #0b0f19;
+}
+
+.services-section-heading {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: right;
   padding-bottom: 10%;
 }
+
+.services-heading-para {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2;
+  max-width: 550px;
+}
+
+.work-section-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.work-heading-para {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  line-height: 2;
+  text-align: right;
+  padding-bottom: 10%;
+}
+
+#about-section-heading {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-size: 5rem; /* larger heading */
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-left: 30%;
+  text-align: right;
+  line-height: 1.25;
+}
+
+#about-heading-para {
+  font-family: "Inter", sans-serif;
+  color: #414141;
+  font-size: 1.5rem;
+  line-height: 2;
+  max-width: 650px; /* keeps readable line length */
+  text-align: left; /* aligns paragraph with heading */
+}
+
+#review-section {
+  background-color: #0b0f19;
+  color: white;
+}
+
+.review-section-heading {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 5rem; /* larger heading */
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: left;
+  padding-bottom: 10%;
+}
+
+.review-heading-para {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2; /* improved readability */
+  max-width: 600px;
+  margin-right: 0; /* remove margin-top */
+  text-align: right;
+}
+
+#faq-section {
+  min-height: 100vh; /* allows section to shrink on smaller screens */
+  background-color: white;
+}
+
+#faq-section-heading {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 5rem; /* scaled down for smaller screens */
+  padding-left: 30%;
+  text-align: right;
+  line-height: 1.25;
+}
+
+#faq-heading-para {
+  font-family: "Inter", sans-serif;
+  color: #414141;
+  font-size: 1.5rem;
+  max-width: 650px;
+  text-align: left;
+  line-height: 2;
+}
+
+#blog-section {
+  min-height: 100vh; /* use min-height instead of height for better responsiveness */
+  background-color: #0b0f19;
+  color: white;
+}
+
+#blog-section-heading {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 5rem; /* smaller for mobile, scales with Bootstrap */
+  line-height: 1.25;
+}
+
+.blog-heading-para {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2; /* improved readability */
+  max-width: 600px;
+  text-align: right;
+  padding-bottom: 10%;
+}
+
+/*
+=============================================================================
+HEADINGS END
+=============================================================================
+*/
 
 /* 
 =============================================================================  
@@ -123,6 +275,10 @@ HEADER SECTION START
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
   color: white;
+}
+
+.nav-link:hover {
+  color: #0b5ed7 !important; /* Ensures text color changes to blue */
 }
 
 /* Active nav link (scrollspy) at top or scrolled */
@@ -438,13 +594,6 @@ SERVICES SECTION START
 ############################################################################### 
 */
 
-#services-section {
-  /*background-color: #f5f5f7;*/
-  /*background-color:#FFF8F0;*/
-  /*background-color: #f5f7fa;*/
-  background-color: #0b0f19;
-}
-
 .card-carousel-container {
   position: relative;
   overflow: hidden;
@@ -684,24 +833,6 @@ SERVICES SECTION START
   margin-bottom: 1%;
 }
 
-.services-section-heading {
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-size: 5rem;
-  font-weight: 500;
-  line-height: 1.25;
-  padding-bottom: 10%;
-  text-align: right;
-}
-
-.services-heading-para {
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  line-height: 2;
-  max-width: 550px; /* controls paragraph width */
-}
-
 .services-heading:hover {
   color: black;
 }
@@ -717,29 +848,6 @@ SERVICES SECTION CLOSE
 WORK SECTION START
 ###########################################################################  
 */
-
-.work-heading-para {
-  font-family: "Inter", sans-serif;
-  /*font-family: 'Madefor Text', sans-serif;*/
-  font-size: 1.5rem;
-  color: white;
-  line-height: 2;
-  padding-bottom: 10%;
-  text-align: right;
-}
-
-.work-section-heading {
-  font-family: "Inter", sans-serif;
-  /*font-family: 'Madefor Text', sans-serif;*/
-  font-size: 5rem;
-  font-weight: 500;
-}
-
-#work-section {
-  background: #0b0f19;
-  padding-top: 10%;
-  padding-bottom: 10%;
-}
 
 .work-img {
   height: 550px;
@@ -865,30 +973,6 @@ ABOUT SECTION START
   padding: 3%;
 }
 
-#about-heading-row {
-  padding-top: 10%;
-}
-
-#about-section-heading {
-  font-family: "Inter", sans-serif;
-  color: black;
-  font-size: 5rem; /* larger heading */
-  font-weight: 500;
-  margin-bottom: 20px;
-  text-align: left; /* ensure left alignment */
-  padding-left: 30%;
-  text-align: right;
-}
-
-#about-heading-para {
-  font-family: "Inter", sans-serif;
-  color: gray;
-  font-size: 1.5rem;
-  line-height: 2;
-  max-width: 550px; /* keeps readable line length */
-  text-align: left; /* aligns paragraph with heading */
-}
-
 .about-stats-container {
   display: flex;
   justify-content: flex-end; /* right-align the container */
@@ -963,15 +1047,6 @@ REVIEW SECTION START
 #########################################################
 */
 
-#review-section {
-  background-color: #0b0f19;
-  color: white;
-}
-
-#review-container {
-  padding-bottom: 10%;
-}
-
 .review-card1 {
   background-color: #0b5ed7;
 }
@@ -982,30 +1057,6 @@ REVIEW SECTION START
 
 .review-card3 {
   background-color: #e6521f;
-}
-
-.review-heading-row {
-  margin-bottom: 80px; /* space below section */
-  padding-top: 10%;
-}
-
-.review-section-heading {
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-size: 4.5rem; /* larger heading */
-  font-weight: 500;
-  margin: 0; /* remove extra spacing */
-  text-align: left;
-}
-
-.review-heading-para {
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  line-height: 1.7; /* improved readability */
-  max-width: 650px;
-  margin: 0; /* remove margin-top */
-  text-align: right;
 }
 
 /*
@@ -1019,37 +1070,6 @@ REVIEW SECTION CLOSE
 FAQ SECTION START 
 #########################################################
 */
-
-#faq-section {
-  min-height: 100vh; /* allows section to shrink on smaller screens */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: white;
-}
-
-#faq-container {
-  margin-top: 2rem; /* use rem instead of % for better scaling */
-}
-
-#faq-section-heading {
-  font-family: "Inter", sans-serif;
-  color: black;
-  font-weight: 500;
-  font-size: 5rem; /* scaled down for smaller screens */
-  text-align: left;
-  padding-left: 30%;
-  text-align: right;
-  line-height: 1.5;
-}
-
-#faq-heading-para {
-  font-family: "Inter", sans-serif;
-  color: gray;
-  font-size: 1.5rem;
-  max-width: 650px;
-  text-align: left;
-  line-height: 2;
-}
 
 .accordion-item {
   background-color: #0b0f19;
@@ -1088,21 +1108,6 @@ FAQ SECTION CLOSE
 BLOG SECTION START 
 #########################################################
 */
-
-#blog-section {
-  min-height: 100vh; /* use min-height instead of height for better responsiveness */
-  background-color: #0b0f19;
-  color: white;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-#blog-section-heading {
-  font-family: "Inter", sans-serif;
-  color: white;
-  font-weight: 500;
-  font-size: 5rem; /* smaller for mobile, scales with Bootstrap */
-}
 
 .blog-img {
   transition: transform 0.4s ease;
@@ -1234,4 +1239,8 @@ FOOTER SECTION START
 
 #twitter {
   color: white;
+}
+
+.social-icon:hover {
+  color: #0b5ed7 !important;
 }

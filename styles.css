@@ -126,7 +126,7 @@ HEADINGS START
 
 #about-heading-para {
   font-family: "Inter", sans-serif;
-  color: #414141;
+  color: gray;
   font-size: 1.5rem;
   line-height: 2;
   max-width: 650px; /* keeps readable line length */
@@ -969,7 +969,7 @@ ABOUT SECTION START
 }
 
 .about-card1 {
-  background-color: #e6521f;
+  background-color: #0b5ed7;
   color: white;
   padding: 30px;
   border-radius: 20px;
@@ -982,8 +982,8 @@ ABOUT SECTION START
 }
 
 .about-card2 {
-  background-color: #d3d2d0;
-  color: #0b0f19;
+  background-color: #e6521f;
+  color: white;
   padding: 30px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -995,7 +995,7 @@ ABOUT SECTION START
 }
 
 .about-card3 {
-  background-color: #0b5ed7;
+  background-color: #0b0f19;
   color: white;
   padding: 30px;
   border-radius: 20px;
@@ -1034,7 +1034,8 @@ ABOUT SECTION START
   padding: 15px 20px;
   background: #0b0f19;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  /*box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);*/
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   color: white;
   opacity: 0;
   transform: translateX(50px); /* start slightly to the right */
@@ -1063,14 +1064,14 @@ ABOUT SECTION START
 }
 
 .stat-label {
-  font-family: "Inter", sans-serif;
-  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
   font-weight: 400;
   color: white;
 }
 
 .stat-number {
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 8rem;
   font-weight: 500;
   color: white;

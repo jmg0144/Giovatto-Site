@@ -160,24 +160,23 @@ HEADINGS START
 
 #faq-section {
   min-height: 100vh; /* allows section to shrink on smaller screens */
-  background-color: white;
+  background-color: #0b0f19;
+  color: white;
 }
 
 #faq-section-heading {
   font-family: "Inter", sans-serif;
-  color: black;
+  color: white;
   font-weight: 500;
   font-size: 5rem; /* scaled down for smaller screens */
-  padding-left: 30%;
   text-align: right;
   line-height: 1.25;
 }
 
 #faq-heading-para {
   font-family: "Inter", sans-serif;
-  color: #414141;
+  color: white;
   font-size: 1.5rem;
-  max-width: 650px;
   text-align: left;
   line-height: 2;
 }
@@ -813,10 +812,6 @@ SERVICES SECTION START
   animation: pulse 1.5s infinite ease-in-out;
 }
 
-.work-button {
-  border-radius: 30px;
-}
-
 /* Top background image hover effect */
 .card-top::before {
   transition: transform 0.6s ease, filter 0.3s ease;
@@ -863,15 +858,7 @@ WORK SECTION START
 }
 
 .work-card {
-  /*background-color: #80caff; 
-  border-radius: 16px; 
-  overflow: hidden;
-  padding: 16px;
-  text-align: center;*/
-  /* Remove or comment out background-color */
   background-color: #f0f0f0;
-
-  /* Make the background cover the entire card */
   background-size: cover;
 
   /* Center the image */
@@ -943,18 +930,23 @@ WORK SECTION START
   color: white;
 }
 
-.project-tags {
-  display: flex;
-  gap: 0.5rem; /* space between tags */
-  font-size: 0.9rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  color: white;
-}
-
 .work-shadow {
   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.work-button {
+  border-radius: 30px;
+  width: 200px;
+  font-family: "Inter", sans-serif;
+}
+
+.large-button {
+  border-radius: 30px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  width: 100%;
 }
 
 /*
@@ -969,12 +961,57 @@ ABOUT SECTION START
 #########################################################
 */
 
+.about-cards {
+  display: flex;
+  justify-content: space-between; /* even spacing */
+  gap: 1.5rem; /* optional gap */
+  margin-bottom: 5%;
+}
+
+.about-card1 {
+  background-color: #e6521f;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+  max-width: 650px; /* keeps readable line length */
+  text-align: left; /* aligns paragraph with heading */
+}
+
+.about-card2 {
+  background-color: #d3d2d0;
+  color: #0b0f19;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+  max-width: 650px; /* keeps readable line length */
+  text-align: left; /* aligns paragraph with heading */
+}
+
+.about-card3 {
+  background-color: #0b5ed7;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2;
+  max-width: 650px; /* keeps readable line length */
+  text-align: left; /* aligns paragraph with heading */
+}
+
 .meet-button {
   border-radius: 30px;
-  width: 300px;
-  margin-top: 30%;
-  margin-left: 50%;
-  padding: 3%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
 }
 
 .about-stats-container {
@@ -1088,7 +1125,7 @@ FAQ SECTION START
   margin-top: 2rem;
 }
 
-/* Responsive adjustments */
+/*Responsive adjustments*/
 @media (max-width: 992px) {
   #faq-section-heading {
     font-size: 2.5rem;
@@ -1126,14 +1163,19 @@ BLOG SECTION START
 /* Blog Card Backgrounds */
 #blog-card1 {
   background-color: #e6521f;
+  padding: 5%;
 }
 
 #blog-card2 {
-  background-color: #aaa;
+  background-color: #d3d2d0;
+  color: #0b0f19;
+  padding: 5%;
 }
 
 #blog-card3 {
   background-color: #80caff;
+  color: #0b0f19;
+  padding: 5%;
 }
 
 /* Adjust card text on small devices */
@@ -1212,8 +1254,7 @@ CONTACT SECTION START
 
 #contact-form-button {
   border-radius: 30px;
-  width: 300px;
-  margin-left: 30%;
+  width: 100%;
 }
 
 /*
@@ -1257,8 +1298,8 @@ BRAND PARTNERS SECTION START
 
 #brand-partners {
   background: white;
-  /*padding: 2rem 0;*/
   overflow: hidden;
+  /*padding: 3rem 1rem;  padding adjusts for smaller screens */
 }
 
 .carousel {
@@ -1269,28 +1310,29 @@ BRAND PARTNERS SECTION START
 
 .carousel-track {
   display: flex;
-  width: calc(200%); /* doubled because of duplication */
-  animation: scroll-left 20s linear infinite;
+  width: 200%; /* doubled because of duplication */
+  animation: scroll-left 25s linear infinite;
 }
 
 .carousel-track img {
-  height: 100px; /* adjust to your needs */
+  height: 80px;
   margin: 0 2rem;
   transition: opacity 0.3s;
+  flex-shrink: 0; /* prevents shrinking on small screens */
 }
 
 .carousel-track img:hover {
   opacity: 1;
 }
 
+/* Heading Styles */
 .partners-heading {
   font-family: "Inter", sans-serif;
   font-size: 5rem;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: #0b0f19;
-  /*max-width: 600px;*/
   line-height: 1.25;
 }
 
@@ -1299,10 +1341,54 @@ BRAND PARTNERS SECTION START
   font-size: 1.5rem;
   color: gray;
   text-align: center;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 2rem auto;
   line-height: 2;
+  max-width: 1000px;
 }
 
+/* --- Responsive Breakpoints --- */
+
+/* Large desktops */
+@media (min-width: 1200px) {
+  .partners-heading {
+    font-size: 5rem;
+  }
+  .carousel-track img {
+    height: 100px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .partners-heading {
+    font-size: 2.5rem;
+  }
+  .partners-heading-para {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+  .carousel-track img {
+    height: 70px;
+    margin: 0 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .partners-heading {
+    font-size: 1.8rem;
+  }
+  .partners-heading-para {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .carousel-track img {
+    height: 50px;
+    margin: 0 1rem;
+  }
+}
+
+/* Infinite Scroll Animation */
 @keyframes scroll-left {
   0% {
     transform: translateX(0);

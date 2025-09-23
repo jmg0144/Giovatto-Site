@@ -60,6 +60,11 @@
   padding-bottom: 120px;
 }
 
+.services-section-padding {
+  padding-top: 240px;
+  padding-bottom: 120px;
+}
+
 /*
 =============================================================================
 HEADINGS START
@@ -259,12 +264,6 @@ HEADER SECTION START
   /*border-color: black !important;*/
 }
 
-/* Hide logo when scrolled 
-#header-section.scrolled #header-logo {
-  opacity: 0;
-  visibility: hidden;
-}*/
-
 /* Show logo at top */
 #header-section #header-logo {
   opacity: 1;
@@ -290,6 +289,10 @@ HEADER SECTION START
 /* Scrolled state for other nav links (not active) */
 #header-section.scrolled .nav-link:not(.active) {
   color: black !important;
+}
+
+#header-section.scrolled .nav-link:not(.active):hover {
+  color: #0b5ed7 !important; /* hover effect when scrolled */
 }
 
 /* Contact button default */
@@ -666,7 +669,7 @@ SERVICES SECTION START
 
 .card-top .card-title {
   font-size: 3.5rem;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
   font-family: "Montserrat", sans-serif;
   color: #0b0f19;
@@ -1244,4 +1247,67 @@ FOOTER SECTION START
 
 .social-icon:hover {
   color: #0b5ed7 !important;
+}
+
+/*
+================================================================
+BRAND PARTNERS SECTION START
+================================================================
+*/
+
+#brand-partners {
+  background: white;
+  /*padding: 2rem 0;*/
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(200%); /* doubled because of duplication */
+  animation: scroll-left 20s linear infinite;
+}
+
+.carousel-track img {
+  height: 100px; /* adjust to your needs */
+  margin: 0 2rem;
+  transition: opacity 0.3s;
+}
+
+.carousel-track img:hover {
+  opacity: 1;
+}
+
+.partners-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #0b0f19;
+  /*max-width: 600px;*/
+  line-height: 1.25;
+}
+
+.partners-heading-para {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: gray;
+  text-align: center;
+  margin: 0 auto 4rem auto;
+  line-height: 2;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

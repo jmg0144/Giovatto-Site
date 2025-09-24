@@ -299,6 +299,10 @@ HEADER SECTION START
   background-color: #0d6efd; /* Bootstrap primary blue */
   color: white;
   transition: all 0.3s ease;
+  border-radius: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  width: 200px;
 }
 
 /* Default hover (at the top) */
@@ -436,9 +440,9 @@ HERO SECTION START
 
 /* Headline */
 #tagline1 {
-  font-size: 5.8rem;
-  font-weight: 700;
-  line-height: 1.25;
+  font-size: 5.6rem;
+  font-weight: 600;
+  line-height: 1.5;
   color: white;
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
@@ -455,9 +459,9 @@ HERO SECTION START
   border-radius: 30px;
   font-size: 1.1rem;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  width: 280px;
+  width: 300px;
 }
 
 /* Video wrapper */
@@ -500,9 +504,9 @@ HERO SECTION START
   position: absolute;
   top: 50%;
   left: 65%;
-  padding-left: 30%;
+  padding-left: 20%;
   transform: translate(-50%, -50%);
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 600;
   color: white;
   z-index: 3;
@@ -510,10 +514,6 @@ HERO SECTION START
   font-family: "Inter", sans-serif;
   text-align: right;
   line-height: 1.5;
-}
-
-#see-our-work {
-  margin-top: 1%;
 }
 
 /* Responsive */
@@ -568,13 +568,6 @@ HERO SECTION START
 
 #agency {
   color: #0d6efd;
-}
-
-#contact {
-  border-radius: 30px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  width: 200px;
 }
 
 #services-button {
@@ -633,10 +626,6 @@ SERVICES SECTION START
   background: transparent;
 }
 
-.apple-card:hover {
-  border: 1px solid white;
-}
-
 .card-top {
   flex: 1;
   background-color: #e6521f;
@@ -679,7 +668,7 @@ SERVICES SECTION START
   background: #0b0f19;
   color: white;
   padding: 30px 20px;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* content starts near top of orange */
@@ -695,12 +684,6 @@ SERVICES SECTION START
   max-width: 300px; /* keeps paragraph width readable */
 }
 
-.services-section-button.narrow-btn {
-  width: 300px;
-  border-radius: 30px;
-  margin-top: auto; /* pushes button to bottom */
-}
-
 .card-top {
   flex: 1;
   background-size: cover; /* ensure the background image shows */
@@ -709,7 +692,7 @@ SERVICES SECTION START
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* push content toward the top */
-  align-items: flex-start;
+  align-items: flex-start; /* center horizontally */
   position: relative;
 }
 
@@ -832,8 +815,65 @@ SERVICES SECTION START
   margin-bottom: 1%;
 }
 
-.services-heading:hover {
-  color: black;
+#apple-card1:hover {
+  border: 1px solid #0b5ed7;
+}
+
+#apple-card2:hover {
+  border: 1px solid white;
+}
+
+#apple-card3:hover {
+  border: 1px solid #e6521f;
+}
+
+#apple-card4:hover {
+  border: 1px solid #80caff;
+}
+
+#apple-card5:hover {
+  border: 1px solid #414141;
+}
+
+#apple-card6:hover {
+  border: 1px solid #d3d2d0;
+}
+
+.services-section-button.narrow-btn {
+  width: 300px;
+  border-radius: 20px;
+  margin-top: auto; /* pushes button to bottom */
+  font-family: "Montserrat", sans-serif;
+}
+
+#services-button1 {
+  background-color: #0b5ed7;
+  color: white;
+}
+
+#services-button2 {
+  background-color: white;
+  color: #0b0f19;
+}
+
+#services-button3 {
+  background-color: #e6521f;
+  color: white;
+}
+
+#services-button4 {
+  background-color: #80caff;
+  color: #0b0f19;
+}
+
+#services-button5 {
+  background-color: #414141;
+  color: white;
+}
+
+#services-button6 {
+  background-color: #d3d2d0;
+  color: #0b0f19;
 }
 
 /*
@@ -936,17 +976,24 @@ WORK SECTION START
 }
 
 .work-button {
-  border-radius: 30px;
+  border-radius: 10px;
   width: 200px;
-  font-family: "Inter", sans-serif;
+  background-color: #0b0f19;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .large-button {
-  border-radius: 30px;
+  border-radius: 10px;
   color: white;
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
   width: 100%;
+  height: 100px;
+  background-color: #0b0f19;
+  border: 1px solid white;
 }
 
 /*
@@ -1165,18 +1212,21 @@ BLOG SECTION START
 #blog-card1 {
   background-color: #e6521f;
   padding: 5%;
+  font-family: "Montserrat", sans-serif;
 }
 
 #blog-card2 {
   background-color: #d3d2d0;
   color: #0b0f19;
   padding: 5%;
+  font-family: "Montserrat", sans-serif;
 }
 
 #blog-card3 {
   background-color: #80caff;
-  color: #0b0f19;
+  color: #414141;
   padding: 5%;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Adjust card text on small devices */
@@ -1256,6 +1306,7 @@ CONTACT SECTION START
 #contact-form-button {
   border-radius: 30px;
   width: 100%;
+  font-family: "Montserrat", sans-serif;
 }
 
 /*

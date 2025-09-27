@@ -126,7 +126,7 @@
             Brands.
           </h1>
           <div class="hero-buttons pt-4">
-            <button class="btn btn-primary hero-btn">
+            <button class="btn btn-primary hero-btn" id="main-button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -141,7 +141,7 @@
               </svg>
               Discover What We Do
             </button>
-            <button class="btn btn-outline-light hero-btn" id="see-our-work">
+            <button class="btn hero-btn" id="see-our-work">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -481,10 +481,10 @@
               </div>
             </div>
             <div class="project-info">
+              <h3 class="project-title text-white">Company</h3>
               <div class="project-tags">
                 <h3 class="project-title text-white">OTT | Social | Display</h3>
               </div>
-              <h3 class="project-title text-white">Company</h3>
             </div>
           </div>
           <!-- Card 2 -->
@@ -499,34 +499,16 @@
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
               <div class="project-tags">
                 <h3 class="project-title text-white">Company</h3>
               </div>
+              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
             </div>
           </div>
         </div>
 
         <div class="row g-4 custom-mb">
           <!-- Card 3 -->
-          <div class="col-6">
-            <div class="work-card text-white" id="work-card3">
-              <div class="project-img-container">
-                <img
-                  src="assets/creative3.jpg"
-                  alt="BryanFolio project"
-                  class="work-shadow"
-                />
-              </div>
-            </div>
-            <div class="project-info">
-              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
-              <div class="project-tags">
-                <h3 class="project-title text-white">Company</h3>
-              </div>
-            </div>
-          </div>
-          <!-- Card 4 -->
           <div class="col-6">
             <div class="work-card text-white" id="work-card6">
               <div class="project-img-container">
@@ -538,33 +520,33 @@
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
               <div class="project-tags">
                 <h3 class="project-title text-white">Company</h3>
               </div>
+              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
             </div>
           </div>
-        </div>
-
-        <div class="row g-4 mt-4 custom-mb">
-          <!-- Card 5 -->
+          <!-- Card 4 -->
           <div class="col-6">
-            <div class="work-card text-white" id="work-card5">
+            <div class="work-card text-white" id="work-card3">
               <div class="project-img-container">
                 <img
-                  src="assets/creative5.jpg"
+                  src="assets/creative3.jpg"
                   alt="BryanFolio project"
                   class="work-shadow"
                 />
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
               <div class="project-tags">
                 <h3 class="project-title text-white">Company</h3>
               </div>
+              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
             </div>
           </div>
+        </div>
+
+        <div class="row g-4 mt-4 custom-mb">
           <!-- Card 6 -->
           <div class="col-6">
             <div class="work-card text-white" id="work-card4">
@@ -577,10 +559,28 @@
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
               <div class="project-tags">
                 <h3 class="project-title text-white">Company</h3>
               </div>
+              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div class="col-6">
+            <div class="work-card text-white" id="work-card5">
+              <div class="project-img-container">
+                <img
+                  src="assets/creative5.jpg"
+                  alt="BryanFolio project"
+                  class="work-shadow"
+                />
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <h3 class="project-title text-white">Company</h3>
+              </div>
+              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
             </div>
           </div>
         </div>
@@ -597,10 +597,10 @@
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
               <div class="project-tags">
                 <h3 class="project-title text-white">Company</h3>
               </div>
+              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
             </div>
           </div>
           <!-- Card 8 -->
@@ -615,10 +615,10 @@
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
               <div class="project-tags">
                 <h3 class="project-title text-white">Company</h3>
               </div>
+              <h3 class="project-title">Web | Lead-Gen | Digital</h3>
             </div>
           </div>
         </div>
@@ -921,9 +921,21 @@
           <!-- Right column justify-content-end -->
           <div class="col-6 position-relative">
             <div class="position-absolute bottom-0 start-0 m-3">
-              <h2 class="text-white">More Questions?</h2>
+              <!--<h2>More Questions?</h2>-->
               <button class="btn btn-outline-light faq-button">
-                Get in Touch
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-right-circle-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+                  />
+                </svg>
+                Ask a Question
               </button>
             </div>
           </div>

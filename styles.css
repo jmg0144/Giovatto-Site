@@ -115,7 +115,7 @@ HEADINGS START
 
 #about-section-heading {
   font-family: "Inter", sans-serif;
-  color: black;
+  color: #0b0f19;
   font-size: 5rem; /* larger heading */
   font-weight: 500;
   margin-bottom: 20px;
@@ -126,7 +126,7 @@ HEADINGS START
 
 #about-heading-para {
   font-family: "Inter", sans-serif;
-  color: gray;
+  color: #414141;
   font-size: 1.5rem;
   line-height: 2;
   max-width: 650px; /* keeps readable line length */
@@ -153,20 +153,18 @@ HEADINGS START
   color: white;
   font-size: 1.5rem;
   line-height: 2; /* improved readability */
-  max-width: 600px;
-  margin-right: 0; /* remove margin-top */
+  max-width: 650px;
   text-align: right;
 }
 
 #faq-section {
   min-height: 100vh; /* allows section to shrink on smaller screens */
-  background-color: #0b0f19;
-  color: white;
+  background-color: white;
 }
 
 #faq-section-heading {
   font-family: "Inter", sans-serif;
-  color: white;
+  color: #0b0f19;
   font-weight: 500;
   font-size: 5rem; /* scaled down for smaller screens */
   text-align: right;
@@ -175,7 +173,7 @@ HEADINGS START
 
 #faq-heading-para {
   font-family: "Inter", sans-serif;
-  color: white;
+  color: #414141;
   font-size: 1.5rem;
   text-align: left;
   line-height: 2;
@@ -398,6 +396,30 @@ HEADER SECTION START
   color: black;
 }
 
+#see-our-work {
+  background-color: #0b0f19;
+  color: #0d6efd;
+  border: 1px solid #0d6efd;
+  transition: border-radius 0.3s ease-in; /* animate the radius */
+}
+
+#see-our-work:hover {
+  border-radius: 10px;
+  background-color: white;
+  transform: scale(1.05);
+}
+
+#main-button {
+  transition: border-radius 0.3s ease-in; /* animate the radius */
+}
+
+#main-button:hover {
+  border-radius: 10px;
+  background-color: white;
+  color: #0d6efd;
+  transform: scale(1.05);
+}
+
 /* 
 ##########################################################################  
 HEADER SECTION CLOSE 
@@ -460,7 +482,7 @@ HERO SECTION START
   font-size: 1.1rem;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   width: 300px;
 }
 
@@ -513,7 +535,7 @@ HERO SECTION START
   /*max-width: 400px;*/
   font-family: "Inter", sans-serif;
   text-align: right;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 /* Responsive */
@@ -626,17 +648,6 @@ SERVICES SECTION START
   background: transparent;
 }
 
-.card-top {
-  flex: 1;
-  background-color: #e6521f;
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* push title toward the bottom half */
-  align-items: flex-start; /* left align */
-  position: relative;
-}
-
 .card-top .card-svg {
   margin-bottom: 10px; /* space above heading */
   position: relative; /* remove absolute so it flows naturally */
@@ -671,8 +682,8 @@ SERVICES SECTION START
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* content starts near top of orange */
-  align-items: flex-start;
+  justify-content: center; /* content starts near top of orange */
+  align-items: center;
 }
 
 .card-bottom p {
@@ -694,6 +705,20 @@ SERVICES SECTION START
   justify-content: flex-start; /* push content toward the top */
   align-items: flex-start; /* center horizontally */
   position: relative;
+}
+
+.card-top {
+  flex: 1;
+  background-color: #e6521f;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* push title toward the bottom half */
+  justify-content: center;
+  align-items: flex-start; /* left align */
+  align-items: center;
+  position: relative;
+  text-align: center;
 }
 
 .card-top .card-title {
@@ -846,6 +871,14 @@ SERVICES SECTION START
   font-family: "Montserrat", sans-serif;
 }
 
+.services-section-button {
+  transition: border-radius 0.3s ease-in; /* animate the radius */
+}
+
+.services-section-button:hover {
+  border-radius: 10px;
+}
+
 #services-button1 {
   background-color: #0b5ed7;
   color: white;
@@ -995,6 +1028,11 @@ WORK SECTION START
   background-color: white;
 }
 
+.large-button:hover {
+  color: white;
+  border: 1px solid white;
+}
+
 /*
 ######################################################### 
 WORK SECTION CLOSE
@@ -1028,7 +1066,7 @@ ABOUT SECTION START
 }
 
 .about-card2 {
-  background-color: #e6521f;
+  background-color: #0b0f19;
   color: white;
   padding: 30px;
   border-radius: 20px;
@@ -1041,7 +1079,7 @@ ABOUT SECTION START
 }
 
 .about-card3 {
-  background-color: #0b0f19;
+  background-color: #e6521f;
   color: white;
   padding: 30px;
   border-radius: 20px;
@@ -1062,6 +1100,10 @@ ABOUT SECTION START
   width: 100%;
   height: 100px;
   background-color: #0b0f19;
+  border: 1px solid #0b0f19;
+}
+
+.meet-button:hover {
   border: 1px solid #0b0f19;
 }
 
@@ -1179,13 +1221,17 @@ FAQ SECTION START
 
 .faq-button {
   border-radius: 10px;
-  color: #0b0f19;
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   width: 500px;
   height: 100px;
-  background-color: white;
+  background-color: #0b0f19;
+}
+
+.faq-button:hover {
+  border: 1px solid #0b0f19;
 }
 
 /*Responsive adjustments*/
